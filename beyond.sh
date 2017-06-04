@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-cd $HOME/BDHelper
+cd $HOME/ppahafbdb
 
 install() {
 		sudo apt-get update
