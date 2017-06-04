@@ -308,7 +308,7 @@ if msg.cb then
 			{text = '> More ', callback_data = '/more:'..matches[2]}
 		},
 		{
-			{text = '> About Us ', callback_data = '/beyond:'..matches[2]}
+			{text = '> About Us ', callback_data = '/teleplus:'..matches[2]}
 		},
 		{
 			{text= '> Exit' ,callback_data = '/exit:'..matches[2]}
@@ -1350,7 +1350,7 @@ if matches[1] == '/rules' then
 	else
 		local rules = data[tostring(matches[2])]['rules']
 		if not rules then
-			text = "ℹ️ The Default Rules :\n1⃣ No Flood.\n2⃣ No Spam.\n3⃣ No Advertising.\n4⃣ Try to stay on topic.\n5⃣ Forbidden any racist, sexual, homophobic or gore content.\n➡️ Repeated failure to comply with these rules will cause ban.\n@BeyondTeam"
+			text = "ℹ️ The Default Rules :\n1⃣ No Flood.\n2⃣ No Spam.\n3⃣ No Advertising.\n4⃣ Try to stay on topic.\n5⃣ Forbidden any racist, sexual, homophobic or gore content.\n➡️ Repeated failure to comply with these rules will cause ban.\n@TelePlus"
 		elseif rules then
 			text = '*Group Rules :*\n'..rules
 		end
@@ -1388,16 +1388,16 @@ if matches[1] == '/cleanrules' then
 	end
 end
          -- ####################### About Us ####################### --
-if matches[1] == '/beyond' then
+if matches[1] == '/teleplus' then
 	local text = _config.info_text
 	keyboard = {} 
 	keyboard.inline_keyboard = {
 		{
-			{text = "> SoLiD", callback_data="/solid:"..matches[2]}, 
-			{text = "> ToOfan", callback_data="/toofan:"..matches[2]}
+			{text = "> PR", callback_data="/pr:"..matches[2]}, 
+			{text = "> PR2", callback_data="/pr2:"..matches[2]}
 		},
 		{
-			{text = '> Our GitHub ', url = 'https://www.github.com/BeyondTeam'}
+			{text = '> Our Channel ', url = '@TelePlus'}
 		},
 		{
 			{text= '> Back' ,callback_data = '/option:'..matches[2]}
@@ -1406,51 +1406,51 @@ if matches[1] == '/beyond' then
     edit_inline(msg.message_id, text, keyboard)
 end
 
-if matches[1] == '/solid' then
-local text = [[*》SoLiD Information《*
-_》Age :_ *26*
-_》Name :_ *Saeid Rostami*
-_》City :_ *Shahriar - Tehran*
+if matches[1] == '/pr' then
+local text = [[*》PR Information《*
+_》Age :_ *----*
+_》Name :_ *Poorya*
+_》City :_ *----*
 *-------------------------*
-*》GitHub :《*
-》[SoLiD021](Github.Com/SoLiD021)
+*》Channel :《*
+》[TelePlus](telegram.me/teleplus)
 *-------------------------*
 *》Bridges :《*
-_》Pv : _[@SoLiD](Telegram.Me/SoLiD)
-_》PvResan : _[@SoLiD Pv](Telegram.Me/SoLiD021Pv_Bot)
+_》Pv : _[@PHAE2099](Telegram.Me/phae2099)
+_》PvResan : _[@pteleplus2_bot](Telegram.Me/pteleplus2_bot)
 *-------------------------*
-*》Expertise :《*
-_》_*Lua*, *Cli* `and` *Api* _Bots_
+*》Favorite :《*
+_》_----_
 *-------------------------*]]
 	keyboard = {} 
 	keyboard.inline_keyboard = {
 		{
-			{text = "> Back", callback_data="/beyond:"..matches[2]}
+			{text = "> Back", callback_data="/teleplus:"..matches[2]}
 		}
 	}
     edit_inline(msg.message_id, text, keyboard)
 end
-if matches[1] == '/toofan' then
-local text = [[*》ToOfan Information《*
-_》Age :_ *35*
-_》Name :_ *Ali AzizAbadi*
-_》City :_ *Bam - Kerman*
+if matches[1] == '/pr2' then
+local text = [[*》PR Information《*
+_》Age :_ *----*
+_》Name :_ *Poorya*
+_》City :_ *----*
 *-------------------------*
-*》GitHub :《*
-》[To0fan](GitHub.Com/To0fan)
+*》Channel :《*
+》[TelePlus](telegram.me/teleplus)
 *-------------------------*
 *》Bridges :《*
-_》Pv :_ [@ToOfan](Telegram.Me/ToOfan)
-_》PvResan :_ [@ToOfanRobot](Telegram.Me/ToOfanRobot)
+_》Pv : _[@PHAE2099](Telegram.Me/phae2099)
+_》PvResan : _[@pteleplus_bot](Telegram.Me/pteleplus_bot)
 *-------------------------*
-*》Expertise :《*
-*》C#, Lua, VB.Net, JAVA*
+*》Favorite :《*
+_》_----_
 
 *-------------------------*]]
 	keyboard = {} 
 	keyboard.inline_keyboard = {
 		{
-			{text = "> Back", callback_data="/beyond:"..matches[2]}
+			{text = "> Back", callback_data="/teleplus:"..matches[2]}
 		}
 	}
     edit_inline(msg.message_id, text, keyboard)
@@ -1514,7 +1514,7 @@ return {
 		"^###cb:(/mutekeyboard):(.*)$",
 		"^###cb:(/mutecontact):(.*)$",
 		"^###cb:(/muteforward):(.*)$",
-		"^###cb:(/toofan):(.*)$",
+		"^###cb:(/pr2):(.*)$",
 		"^###cb:(/setflood):(.*)$",
 		"^###cb:(/floodup):(.*)$",
 		"^###cb:(/flooddown):(.*)$",
@@ -1529,14 +1529,14 @@ return {
 		"^###cb:(/modlist):(.*)$",
 		"^###cb:(/cleanmods):(.*)$",
 		"^###cb:(/bans):(.*)$",
-		"^###cb:(/beyond):(.*)$",
+		"^###cb:(/teleplus):(.*)$",
 		"^###cb:(/cleanbans):(.*)$",
 		"^###cb:(/filterlist):(.*)$",
 		"^###cb:(/cleanfilterlist):(.*)$",
 		"^###cb:(/whitelist):(.*)$",
 		"^###cb:(/cleanwhitelist):(.*)$",
 		"^###cb:(/silentlist):(.*)$",
-		"^###cb:(/solid):(.*)$",
+		"^###cb:(/pr):(.*)$",
 		"^###cb:(/cleansilentlist):(.*)$",
 		"^###cb:(/link):(.*)$",
 		"^###cb:(/rules):(.*)$",
